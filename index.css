@@ -1,0 +1,112 @@
+
+*{
+    outline: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.table-con-1 {
+    padding: 2rem;
+    border-radius: 0.3rem;
+    background: #f3f3f3;
+}
+
+table.table {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    background: white;
+}
+
+thead.bg-gray-50 {
+    background: linear-gradient(45deg, #673AB7, #4c98ff);
+    padding: 1rem;
+    color: white;
+}
+.table-head {
+    padding: 0.5rem;
+    text-transform: capitalize;
+}
+.tbody-row {
+    border-bottom: 1px solid #460606;
+    background: #4d94fc1c;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0.4rem;
+}
+
+td.table-data {
+    padding: 0.5rem;
+}
+
+a.edit-link {
+    text-decoration: none;
+    background: #319d31;
+    color: white;
+    padding: 0.2rem 1.5rem;
+    border-radius: 30px;
+}
+
+a.delete-link {
+    text-decoration: none;
+    background: #f11e1e;
+    color: white;
+    padding: 0.2rem 1.5rem;
+    border-radius: 30px;
+}
+
+tr.tbody-row:nth-child(even){
+    background: #663dba1c;
+}
+
+
+
+@media (max-width:  500px) {
+    thead{
+        display: none;
+    }
+    .table-con-1 {
+         padding: 0rem;
+        border-radius: 0.3rem;
+        background: #f3f3f3;
+        width: 100%;
+    }
+    table.table {
+        width: 100%;
+        
+        border-radius: 0px;
+        background: rgb(255, 255, 255);
+      
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+}
+
+    .table, tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    .tbody-row {
+        border-bottom: 1px solid #0e0202;
+        background: #4d93fc00;
+        text-align: center;
+        text-transform: capitalize;
+        padding: 0.5rem;
+    }
+    td{
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+        padding: 3px;
+        
+    }
+    td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        font-weight: bold;
+        text-align: left;
+    }
+}
